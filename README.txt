@@ -28,3 +28,4 @@ Documentation of git commands used, and annotated sample sequence of commands us
 8. git commit -m “message”
 9. git fetch
 10. git merge origin/master
+11. git push origin new_feature
