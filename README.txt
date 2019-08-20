@@ -20,6 +20,7 @@ Link to your Git example repository: https://github.com/aarush3002/Feature_Branc
 Documentation of git commands used, and annotated sample sequence of commands used in creating your repository:
 1. git init
 2. git clone https://github.com/aarush3002/Feature_Branch.git
+    -you may or may not have to run the following command: git remote add origin https://github.com/aarush3002/Feature_Branch.git
 3. git fetch
 4. git merge origin/master
 5. git branch new_feature
