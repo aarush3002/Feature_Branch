@@ -1,32 +1,26 @@
-# Git Workflow Example
-Team Names: Yuvraj Khullar, Aarush Aitha, Jeff Cheema, Ranju Krishna
+Feature Branch Workflow
+
+Team Names:  Lac-Phong N, Josh B, Michael R, Daylen B
 
 Name of Workflow:  Feature Branch
 
-Description of Basic Git workflow: Basic Git Workflow 
-Basic Git Workflow works by starting with a master, or the original starting branch, and multiple developers who have cloned the repository of the original. Using these copies, each individual initialize
+Description of Basic Git workflow: In a basic git workflow, there are no branches, only the master. In this workflow, a user will pull any changes to their local repository, make their changes, and then just commit and push to the master branch. They must fix any merge conflicts that come up, as they come up. In this workflow everyone is working on the same codebase at the same time. To decrease merge errors, users should fetch before working and pushing to the remote. 
 
-Description of Feature Branch workflow: 
+Description of Feature Branch: In the feature branch, production branches are created for individual features. These feature branches once tested can be merged into the master branch.When using this method you must keep in mind that you cannot work on the same thing in two different feature branches. 
 
-Key Differences from basic workflow, and key use cases
-All feature development should take place in a dedicated branch instead of the master branch
-Makes it possible to leverage pull requests
-Composable workflow that can be leveraged by other high-level Git workflows
-Guiding framework for managing and creating branches
+Key Differences from basic workflow, and key use cases:
+In the Basic Git workflow, there is a single master branch in which people will pull and push changes. In a Feature Branch, each person will create their own branch for the feature they are working on and eventually merge it back into the master branch.
+Merge conflicts can be a common problem with Basic Git workflows due to people working/pushing to a branch at the same time. Feature branches solve this by each person creating their own branch. 
+In Feature Branch, each branch is dedicated to a specific feature, and usually two people won’t work on the same feature. This allows for rapid development and safety against merge conflict. 
 
-Link to your Git example repository: https://github.com/aarush3002/Feature_Branch.git
+Link to your Git example repository: https://github.com/MichaelRejo1601/git-test
 
 
-Documentation of git commands used, and annotated sample sequence of commands used in creating your repository:
-1. git init
-2. git clone https://github.com/aarush3002/Feature_Branch.git
-    -you may or may not have to run the following command: git remote add origin https://github.com/aarush3002/Feature_Branch.git
-3. git fetch
-4. git merge origin/master
-5. git branch new_feature
-6. git checkout new_feature
-7. git add new_file.txt
-8. git commit -m “message”
-9. git fetch
-10. git merge origin/master
-11. git push origin new_feature
+git clone _____URL______   //pulls repository
+git pull //Fast Forwards and updates local copy of master
+git checkout -b [name_of_your_new_branch]   //Creates new branch
+git add //Adds file to staging area
+git commit -m //Commits file with a message
+git push //Pushes local branch to remote branch
+git merge [name_of_your_remote]/master      //Merges the branch to the master branch
+git branch -d [name_of_your_new_branch]     //deletes fast branch locally
